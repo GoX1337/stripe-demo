@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class StripeController {
 
-    @PostMapping(path = "create-payment-intent")
+    @PostMapping("/create-payment-intent")
     public CreatePaymentResponse paymentIntent(@RequestBody CreatePayment createPayment) throws StripeException {
         PaymentIntentCreateParams createParams = new PaymentIntentCreateParams.Builder()
                 .setCurrency("eur")
